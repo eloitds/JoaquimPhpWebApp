@@ -7,6 +7,7 @@ Per a poder demostrar la connexió contra la db, fem un count() d'una taula per 
 Dades Mysql per a que funcioni la part de la DB (en cas de ser diferents, s'ha de modificar el .php amb les dades bones):
 
 Excutar el script database.sql per a crear es schema un cop connectar al servidor per a deixar-ho preparat.
+Vaig a lo bruto i no utilitzo un datasource, sino que ho foto a saco al codi, pero ja m'està bé pe a la demo que es vol fer.
 
 Servidor: joaquimphpwebapp-mysqldbserver.mysql.database.azure.com
 
