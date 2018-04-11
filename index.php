@@ -13,7 +13,7 @@
   
  echo "Hola soc el servidor: " .gethostname();
  echo "\n";
- echo "Em vull connectar al servidor $servername; 
+ echo "Em vull connectar al servidor $servername"; 
  ?>
  
  </body>
