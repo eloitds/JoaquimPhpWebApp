@@ -29,18 +29,20 @@ $sql = "INSERT INTO $tablename (server, ip)
 VALUES ('$hostname', '".$_SERVER['REMOTE_ADDR']."')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "Registrat correctament al connection log<br>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
   
- /*$sql = "SELECT count(*) FROM $connectionlog"; 
+ $sql = "SELECT count(*) FROM $tablename"; 
  $result = $conn->query($sql);
   
  if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<br> id: ". $row["id"]. " - Name: ". $row["firstname"]. " " . $row["lastname"] . "<br>";
+        echo "<br> connexions registrades: "
+         . $row["count(*)"]
+         . "<br>";
     }
 } else {
     echo "0 results";
