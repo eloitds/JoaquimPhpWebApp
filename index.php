@@ -7,20 +7,47 @@
  $servername = "joaquimphpwebapp-mysqldbserver.mysql.database.azure.com";
  $username = "mysqldbuser@joaquimphpwebapp-mysqldbserver";
  $password = "Webapp1234";
- $dbname = "joaquimphpwebapp"; 
+ $dbname = "joaquimphpwebapp";
+ $tablename= "connectionlog";
+ $hostname= gethostname();
+ $clientip = $_SERVER['HTTP_CLIENT_IP']?$_SERVER['HTTP_CLIENT_IP']:($_SERVER['HTTP_X_FORWARDED_FOR']?$_SERVER['HTTP_X_FORWARDED_FOR']:$_SERVER['REMOTE_ADDR']);
+
  
  echo "<p>JoaquimPhpWebApp</p>";
   
- echo "Hola soc el servidor: " .gethostname();
- echo "<br>";
+ echo "Hola soc el servidor: $hostname<br>";
  echo "Em vull connectar al servidor $servername<br>";
   
  // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
+ $conn = new mysqli($servername, $username, $password, $dbname);
+ // Check connection
+ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
+ }
+  
+$sql = "INSERT INTO $tablename (server, ip)
+VALUES ($hostname, $clientip)";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
+  
+ /*$sql = "SELECT count(*) FROM $connectionlog"; 
+ $result = $conn->query($sql);
+  
+ if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<br> id: ". $row["id"]. " - Name: ". $row["firstname"]. " " . $row["lastname"] . "<br>";
+    }
+} else {
+    echo "0 results";
+}*/
+  
+  
+ $conn->close();
  
   ?>
  
