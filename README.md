@@ -7,6 +7,9 @@ Per a poder demostrar la connexió contra la db, fem un count() d'una taula per 
 Dades Mysql per a que funcioni la part de la DB (en cas de ser diferents, s'ha de modificar el .php amb les dades bones):
 
 Servidor: joaquimphpwebapp-mysqldbserver.mysql.database.azure.com
+
 DB: JoaquimPHPWebApp
+
 Usuari: mysqldbuser@joaquimphpwebapp-mysqldbserver
+
 Password: Webapp123
