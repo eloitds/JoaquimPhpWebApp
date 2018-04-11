@@ -17,5 +17,5 @@ Taula: connectionlog
 
 Usuari: mysqldbuser@joaquimphpwebapp-mysqldbserver
 
-Password: Webapp123
+Password: Webapp1234
 
