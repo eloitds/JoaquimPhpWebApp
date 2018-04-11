@@ -9,7 +9,7 @@
  $password = "Webapp123";
  $dbname = "connectionlog"; 
  
- echo "JoaquimPhpWebApp";
+ echo "<p>JoaquimPhpWebApp</p>";
   
  #echo "Hola soc el servidor: " gethostname();
  #" Em vull connectar al servidor $servername"; 
