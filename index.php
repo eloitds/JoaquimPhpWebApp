@@ -13,7 +13,7 @@
   
  echo "Hola soc el servidor: " .gethostname();
  echo "<br>";
- echo "<p>Em vull connectar al servidor $servername</p>";
+ echo "Em vull connectar al servidor $servername<br>";
   
  // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
