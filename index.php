@@ -10,7 +10,7 @@
  $dbname = "joaquimphpwebapp";
  $tablename= "connectionlog";
  $hostname= gethostname();
- $clientip = $_SERVER['HTTP_CLIENT_IP']?$_SERVER['HTTP_CLIENT_IP']:($_SERVER['HTTP_X_FORWARDED_FOR']?$_SERVER['HTTP_X_FORWARDED_FOR']:$_SERVER['REMOTE_ADDR']);
+ //$clientip = $_SERVER['HTTP_CLIENT_IP']?$_SERVER['HTTP_CLIENT_IP']:($_SERVER['HTTP_X_FORWARDED_FOR']?$_SERVER['HTTP_X_FORWARDED_FOR']:$_SERVER['REMOTE_ADDR']);
 
  
  echo "<p>JoaquimPhpWebApp</p>";
@@ -26,7 +26,7 @@
  }
   
 $sql = "INSERT INTO $tablename (server, ip)
-VALUES ($hostname, $clientip)";
+VALUES ('$hostname', '".$_SERVER['REMOTE_ADDR']."')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
