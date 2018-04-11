@@ -8,6 +8,8 @@
  $username = "mysqldbuser@joaquimphpwebapp-mysqldbserver";
  $password = "Webapp123";
  $dbname = "connectionlog"; 
+ 
+ echo "JoaquimPhpWebApp";
   
  #echo "Hola soc el servidor: " gethostname();
  #" Em vull connectar al servidor $servername"; 
