@@ -12,7 +12,7 @@
  echo "<p>JoaquimPhpWebApp</p>";
   
  echo "Hola soc el servidor: " .gethostname();
- echo "\n";
+ echo "<br>";
  echo "Em vull connectar al servidor $servername"; 
  ?>
  
