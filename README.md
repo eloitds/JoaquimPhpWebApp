@@ -6,10 +6,15 @@ Per a poder demostrar la connexió contra la db, fem un count() d'una taula per 
 
 Dades Mysql per a que funcioni la part de la DB (en cas de ser diferents, s'ha de modificar el .php amb les dades bones):
 
+Excutar el script database.sql per a crear es schema un cop connectar al servidor per a deixar-ho preparat.
+
 Servidor: joaquimphpwebapp-mysqldbserver.mysql.database.azure.com
 
-DB: JoaquimPHPWebApp
+DB: joaquimphpwebapp
+
+Taula: connectionlog
 
 Usuari: mysqldbuser@joaquimphpwebapp-mysqldbserver
 
 Password: Webapp123
+
