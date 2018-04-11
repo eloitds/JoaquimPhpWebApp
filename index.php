@@ -4,8 +4,7 @@
  </head>
  <body>
  <?php 
- echo '<p>Hola soc el servidor</p>';
- echo '<p>gethostname()</p>';
+ echo '<p>Hola soc el servidor</p> 'gethostname();
  ?>
  </body>
 </html>
