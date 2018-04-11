@@ -7,7 +7,7 @@
  $servername = "joaquimphpwebapp-mysqldbserver.mysql.database.azure.com";
  $username = "mysqldbuser@joaquimphpwebapp-mysqldbserver";
  $password = "Webapp1234";
- $dbname = "connectionlog"; 
+ $dbname = "joaquimphpwebapp"; 
  
  echo "<p>JoaquimPhpWebApp</p>";
   
