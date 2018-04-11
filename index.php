@@ -13,8 +13,16 @@
   
  echo "Hola soc el servidor: " .gethostname();
  echo "<br>";
- echo "Em vull connectar al servidor $servername"; 
- ?>
+ echo "Em vull connectar al servidor $servername";
+  
+ // Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+ 
+  ?>
  
  </body>
 </html>
