@@ -1,6 +1,6 @@
 <html>
  <head>
-  <title>Prueba de PHP</title>
+  <title>PHP demo Application with Azure Files</title>
  </head>
  <body>
  <?php 
