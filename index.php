@@ -1,6 +1,6 @@
 <html>
  <head>
-  <title>PHP demo Application with Azure Files</title>
+  <title>PHP App</title>
  </head>
  <body>
  <?php 
