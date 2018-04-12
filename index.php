@@ -1,6 +1,6 @@
 <html>
  <head>
-  <title>PHP App</title>
+  <title>PHP App del joaquim</title>
  </head>
  <body>
  <?php 
