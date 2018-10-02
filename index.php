@@ -23,7 +23,7 @@
   
   
   $conn = mysqli_init();
-  mysqli_ssl_set($conn,NULL,NULL, "/BaltimoreCyberTrustRoot.crt.pem", NULL, NULL) ; 
+  mysqli_ssl_set($conn,NULL,NULL, "BaltimoreCyberTrustRoot.crt.pem", NULL, NULL) ; 
   //mysqli_real_connect($conn, '$servername', '$username', '$password', '$dbname', 3306, MYSQLI_CLIENT_SSL, MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
   mysqli_real_connect($conn, '$servername', '$username', '$password', '$dbname');
  
