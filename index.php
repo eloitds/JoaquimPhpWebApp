@@ -4,9 +4,9 @@
  </head>
  <body>
  <?php 
- $servername = "ntv-az-testmysql01.mysql.database.azure.com";
- $username = "administrador@ntv-az-testmysql01";
- $password = ">Ir0Xb5Rk8Q\"";
+ $servername = "ntv-az-testmysql02.mysql.database.azure.com";
+ $username = "administrador@ntv-az-testmysql02";
+ $password = "!Passw0rd";
  $dbname = "ncloadtest";
  $tablename= "connectionlog";
  $hostname= gethostname();
@@ -18,19 +18,13 @@
  echo "Hola soc el servidor: $hostname<br>";
  echo "Em vull connectar al servidor $servername<br>";
   
- // Create connection
- //$conn = new mysqli($servername, $username, $password, $dbname);
-  
-  
-  $conn = mysqli_init();
-  mysqli_ssl_set($conn,NULL,NULL, "BaltimoreCyberTrustRoot.crt.pem", NULL, NULL) ; 
-  //mysqli_real_connect($conn, '$servername', '$username', '$password', '$dbname', 3306, MYSQLI_CLIENT_SSL, MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
-  mysqli_real_connect($conn, '$servername', '$username', '$password', '$dbname');
- 
-  if (mysqli_connect_errno($conn)) {
-  die('Failed to connect to MySQL: '.mysqli_connect_error());
-  
+// Create connection
+ $conn = new mysqli($servername, $username, $password, $dbname);
+ // Check connection
+ if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
  }
+ 
 
   
 $sql = "INSERT INTO $tablename (server, ip)
