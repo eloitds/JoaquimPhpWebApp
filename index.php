@@ -19,22 +19,27 @@
  echo "Em vull connectar al servidor $servername<br>";
   
  // Create connection
- // $conn = new mysqli($servername, $username, $password, $dbname);
-  $conn = mysqli_init();
+ $conn = new mysqli($servername, $username, $password, $dbname);
+  
+  
+  //$conn = mysqli_init();
   echo "0";
   mysqli_ssl_set($conn,NULL,NULL, "/BaltimoreCyberTrustRoot.crt.pem", NULL, NULL) ; 
   echo "1";
-  mysqli_real_connect($conn, '$servername', '$username', '$password', '$dbname', 3306, MYSQLI_CLIENT_SSL, MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
+  //mysqli_real_connect($conn, '$servername', '$username', '$password', '$dbname', 3306, MYSQLI_CLIENT_SSL, MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
   echo "2";
-  if (mysqli_connect_errno($conn)) {
-  die('Failed to connect to MySQL: '.mysqli_connect_error());
-  echo "3";
-  }
-  echo "4";
+  //if (mysqli_connect_errno($conn)) {
+  //die('Failed to connect to MySQL: '.mysqli_connect_error());
+  //echo "3";
+ // }
+  //echo "4";
+  
+  
+  
  // Check connection
- if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
- }
+if ($conn->connect_error) {
+   die("Connection failed: " . $conn->connect_error);
+}
   
 $sql = "INSERT INTO $tablename (server, ip)
 VALUES ('$hostname', '".$_SERVER['REMOTE_ADDR']."')";
