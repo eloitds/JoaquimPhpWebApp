@@ -4,10 +4,10 @@
  </head>
  <body>
  <?php 
- $servername = "joaquimphpwebapp-mysqldbserver.mysql.database.azure.com";
- $username = "mysqldbuser@joaquimphpwebapp-mysqldbserver";
- $password = "Webapp1234";
- $dbname = "joaquimphpwebapp";
+ $servername = "ntv-az-testmysql01.mysql.database.azure.com";
+ $username = "administrador@ntv-az-testmysql01";
+ $password = ">Ir0Xb5Rk8Q\"";
+ $dbname = "ncloadtest";
  $tablename= "connectionlog";
  $hostname= gethostname();
  //$clientip = $_SERVER['HTTP_CLIENT_IP']?$_SERVER['HTTP_CLIENT_IP']:($_SERVER['HTTP_X_FORWARDED_FOR']?$_SERVER['HTTP_X_FORWARDED_FOR']:$_SERVER['REMOTE_ADDR']);
