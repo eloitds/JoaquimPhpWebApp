@@ -22,7 +22,7 @@
  // $conn = new mysqli($servername, $username, $password, $dbname);
   $conn = mysqli_init();
   mysqli_ssl_set($conn,NULL,NULL, "/BaltimoreCyberTrustRoot.crt.pem", NULL, NULL) ; 
-  mysqli_real_connect($conn, '$servername', '$username', '$password', 'quickstartdb', 3306, MYSQLI_CLIENT_SSL, MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
+  mysqli_real_connect($conn, '$servername', '$username', '$password', '$dbname', 3306, MYSQLI_CLIENT_SSL, MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
   if (mysqli_connect_errno($conn)) {
   die('Failed to connect to MySQL: '.mysqli_connect_error());
   }
